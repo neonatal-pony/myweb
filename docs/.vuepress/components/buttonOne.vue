@@ -1,12 +1,17 @@
 <template>
-    <button class="buttonone" @click="buttononeclick">按钮1</button>
+    <button class="buttonone" @click="buttononeclick">点赞{{count}}</button>
 </template>
 <script>
 
 export default{
+    data() {
+        return {
+            count: 0
+        }
+    },
     methods: {
-        buttonOneclick() {
-            console,log("123")
+        buttononeclick() {
+            this.count++
         }
     },
 }
